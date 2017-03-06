@@ -7,7 +7,7 @@ addons:
     sources:
       - sourceline: 'deb http://ppa.launchpad.net/jonathonf/perl6/ubuntu trusty main'
     packages:
-      - perl6
+      - rakudo
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install rakudo-star; fi
