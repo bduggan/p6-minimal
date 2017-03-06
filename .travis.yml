@@ -5,4 +5,4 @@ before_install:
   - brew update
   - brew install rakudo-star
 script:
-  - prove -perl6 t/*
+  - prove -eperl6 t/*
