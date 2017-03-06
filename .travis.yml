@@ -1,0 +1,6 @@
+addons:
+  apt:
+    packages:
+      - rakudo
+script:
+  - prove -eperl6 t/*
