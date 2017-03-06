@@ -1,6 +1,5 @@
-addons:
-  apt:
-    packages:
-      - rakudo
-script:
-  - prove -eperl6 t/*
+os:
+  - osx
+install:
+  - brew update
+  - brew install rakudo-star
