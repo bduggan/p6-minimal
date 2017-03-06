@@ -5,7 +5,7 @@ os:
 addons:
   apt:
     sources:
-      - ppa:jonathonf/perl6
+      - sourceline: 'deb http://ppa.launchpad.net/jonathonf/perl6/ubuntu trusty main'
     packages:
       - perl6
 before_install:
