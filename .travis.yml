@@ -3,3 +3,5 @@ os:
 install:
   - brew update
   - brew install rakudo-star
+script:
+  - zef test .
