@@ -1,8 +1,15 @@
 language: perl6
 os:
   - osx
-install:
-  - brew update
-  - brew install rakudo-star
+  - linux
+addons:
+  apt:
+    sources:
+      - ppa:jonathonf/perl6
+    packages:
+      - perl6
+before_install:
+  - [[ "$TRAVIS_OS_NAME" == "osx" ]] && brew update
+  - [[ "$TRAVIS_OS_NAME" == "osx" ]] && brew install rakudo-star
 script:
-  - zef test .
+  - prove -perl6 t/*
