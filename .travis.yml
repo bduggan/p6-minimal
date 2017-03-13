@@ -1,10 +1,9 @@
 sudo: false
 install:
-     - '[ ! -d $HOME/.rakudobrew ] && git clone https://github.com/tadzik/rakudobrew.git $HOME/.rakudobrew
-        && rakudobrew build moar 2017.01
-        && rakudobrew build-zef
-        && zef --depsonly install .
-        || true'
+     - [ ! -d $HOME/.rakudobrew ] && git clone https://github.com/tadzik/rakudobrew.git $HOME/.rakudobrew
+     - which perl6 || rakudobrew build moar 2017.01
+     - which zef || rakudobrew build-zef
+     - zef --depsonly install . || true
 perl6:
      - 2017.01
 script:
