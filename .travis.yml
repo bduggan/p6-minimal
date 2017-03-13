@@ -1,6 +1,16 @@
-language: perl6
 sudo: false
 install:
-     - rakudobrew build-zef
+     - '[ ! -d $HOME/.rakudobrew ] || git clone https://github.com/tadzik/rakudobrew.git $HOME/.rakudobrew'
+     - which perl6 || rakudobrew build moar 2017.01
+     - which zef || rakudobrew build-zef
+     - zef --depsonly install . || true
 perl6:
      - 2017.01
+script:
+  - zef test .
+cache:
+  directories:
+    - $HOME/.rakudobrew
+env:
+  global:
+    PATH=$PATH:$HOME/.rakudobrew/bin
