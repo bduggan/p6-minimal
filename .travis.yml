@@ -13,4 +13,4 @@ cache:
     - $HOME/.rakudobrew
 env:
   global:
-    PATH=$PATH:$HOME/.rakudobrew/bin
+    - PATH=$PATH:$HOME/.rakudobrew/bin
