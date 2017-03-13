@@ -1,0 +1,15 @@
+{
+    "name" : "Pony",
+    "source-url" : "git://github.com/bduggan/p6-minimal.git",
+    "perl" : "6.c",
+    "build-depends" : [ ],
+    "provides" : {
+    },
+    "depends" : [
+        "JSON::Fast"
+    ],
+    "description" : "Minimal p6 build repo",
+    "test-depends" : [ ],
+    "version" : "0.0.1",
+    "authors" : [ ]
+}
