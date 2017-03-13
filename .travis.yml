@@ -1,8 +1,6 @@
 language: perl6
-os:
-  - osx
-before_install:
-  - brew update
-  - brew install rakudo-star
-script:
-  - prove -eperl6 t/*
+sudo: false
+install:
+     - rakudobrew build-zef
+perl6:
+     - 2017.01
